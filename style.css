@@ -1,0 +1,97 @@
+/* Загальні стилі */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: green;
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  /* white-space: pre-wrap; */
+  text-align: center;
+  padding: 1.25rem;
+}
+
+/* Стилі модального вікна */
+
+.modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f4f4f4;
+  border-radius: 0.6rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1),
+    -3px -3px 6px rgba(255, 255, 255, 0.5);
+  padding: 0.6rem;
+  max-width: 300px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Стилі тексту модального вікна*/
+
+.modal-window-descr {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+}
+.modal-window-descr span {
+  color: red;
+}
+
+/* Стилі зображення модального вікна*/
+
+.modal-img {
+  display: inline-block;
+  width: 60%;
+  margin-bottom: 0.6rem;
+}
+
+/* Стилі для кнопки модального вікна*/
+
+.modal-matrix-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  color: #0f0;
+  background: #000;
+  border: 1px solid #0f0;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.modal-matrix-button:hover {
+  color: red;
+}
+
+.modal-matrix-button:hover::after {
+  content: " \2622";
+  font-size: 1.2rem;
+}
+
+/* Анімація для основного тексту, я її нагуглила :)*/
+@keyframes matrix {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Стилі для основного тексту */
+
+.matrix-text {
+  /* position: relative; */
+  animation: matrix 60s linear infinite;
+}
+
+/* У мене є ідеї, що має бути після натиснення кнопки, але ддя цього потрібно знати JS :) */
